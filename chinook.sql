@@ -17,7 +17,13 @@ SELECT Title FROM albums
 WHERE Title LIKE "%of%"
 ORDER BY Title ASC
 
-SELECT t.name, g.name FROM tracks t JOIN genres g ON t.GenreId = g.GenreId
+SELECT t.name, g.name FROM tracks t JOIN genres g ON t.GenreId = 
 
-SELECT t.name, a.Title FROM tracks t JOIN albums a ON t.AlbumId = a.AlbumId
+SELECT t.name, a.Title, t.UnitPrice FROM tracks t JOIN albums a ON t.AlbumId = a.AlbumId
+WHERE t.UnitPrice = "0.99"
 ORDER BY Title DESC
+
+-- not finished
+SELECT * FROM tracks
+ORDER BY Milliseconds ASC
+LIMIT 20
